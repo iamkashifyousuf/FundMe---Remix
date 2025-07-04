@@ -61,14 +61,22 @@ A helper library using Chainlink to:
 
 ---
 
-## 🛠️ Installation
+## Deploy
 
-1. Clone this repository
-2. Install dependencies using [Foundry](https://book.getfoundry.sh/) or [Hardhat](https://hardhat.org/)
-3. Deploy the contracts to a testnet (e.g., Sepolia)
+- Compile both files
+- Deploy `FundMe.sol`
+- Make sure your environment is set to:
+  - **Injected Provider - Metamask** (for testnet)
+  - Or **Remix VM** (for local testing)
+
+> ✅ If using Injected Web3, connect to Sepolia (or any network that supports Chainlink price feeds)
 
 ---
 
-## 📁 File Structure
+## 🔗 Chainlink ETH/USD Feed Used
 
-
+```solidity
+// Sepolia ETH/USD Price Feed
+AggregatorV3Interface priceFeed = AggregatorV3Interface(
+  0x694AA1769357215DE4FAC081bf1f309aDC325306
+);
